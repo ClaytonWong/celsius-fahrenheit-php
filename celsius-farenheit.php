@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Example of PHP POST method</title>
+    <title>Celsius to Farenheit converter</title>
 </head>
 <body>
 <?php
