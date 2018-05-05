@@ -25,7 +25,7 @@ if(isset($_POST["number"])){
 ?>
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
   <label for="inputNumber">Temp. in Celsius:</label>
-  <input type="number" name="number" id="inputNumber">
+  <input type="number" step="any" name="number" id="inputNumber">
   <input type="submit" value="Find temp. in Farenheit">
 </form>
 </body>
