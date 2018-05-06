@@ -37,7 +37,6 @@
       margin-top: 4px;
       margin-bottom: 4px;
     }
-
   </style>
 </head>
 
@@ -47,7 +46,6 @@
   </h2>
 
   <?php
-    
     if( isset($_POST["number"]) )
     { 
       $numberErr = "";
