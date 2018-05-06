@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   
   <title>
-    Celsius to Farenheit converter
+    Celsius to Fahrenheit converter
   </title>
 
   <style type="text/css">
@@ -15,6 +15,7 @@
     
     body
     {
+      background-color: LemonChiffon;
       text-align: center;
       margin-top: 8rem;
     }
@@ -57,7 +58,7 @@
       }
       else
       {   
-        if($_POST["conversion_type"] == "Celsius to Farenheit")
+        if($_POST["conversion_type"] == "Celsius to Fahrenheit")
         {
           $c = $_POST["number"];
 
@@ -65,11 +66,11 @@
         
           if($c == 1 || $c == -1)
           {
-            echo "<p>" . $c . " degree Celsius =  " . $f . " degrees Farenheit" . "</p>";
+            echo "<p>" . $c . " degree Celsius =  " . $f . " degrees Fahrenheit" . "</p>";
           }
           else
           {
-            echo "<p>" . $c . " degrees Celsius =  " . $f . " degrees Farenheit" . "</p>";
+            echo "<p>" . $c . " degrees Celsius =  " . $f . " degrees Fahrenheit" . "</p>";
           }
         }
         else
@@ -80,11 +81,11 @@
 
           if($f == 1 || $f == -1)
           {
-            echo "<p>" . $f . " degree Farenheit = " . $c . " degrees Celsius" . "</p>";
+            echo "<p>" . $f . " degree Fahrenheit = " . $c . " degrees Celsius" . "</p>";
           }
           else
           {
-            echo "<p>" . $f . " degrees Farenheit = " . $c . " degrees Celsius" . "</p>";
+            echo "<p>" . $f . " degrees Fahrenheit = " . $c . " degrees Celsius" . "</p>";
           }
         }
       }
@@ -93,11 +94,11 @@
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
     <div class="outer"> 
       <div>
-        <input type="radio" name="conversion_type" value="Celsius to Farenheit" checked id="inputRadio">Celsius to Farenheit
+        <input type="radio" name="conversion_type" value="Celsius to Fahrenheit" checked id="inputRadio">Celsius to Fahrenheit
       </div>
 
       <div>
-        <input type="radio" name="conversion_type" value="Farenheit to Celsius" id="inputRadio">Farenheit to Celsius
+        <input type="radio" name="conversion_type" value="Fahrenheit to Celsius" id="inputRadio">Fahrenheit to Celsius
       </div>
       
       <div class="number">
@@ -112,7 +113,6 @@
         <div>
           <span class="error"><?php echo $numberErr; ?></span>
         </div>
-             
       </div>
       
       <input type="submit" value="Perform Conversion">  
