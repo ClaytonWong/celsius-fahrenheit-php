@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   
   <title>
-    Celsius to Fahrenheit converter
+    Temperature Converter
   </title>
 
   <style type="text/css">
