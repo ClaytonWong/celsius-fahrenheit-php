@@ -8,11 +8,41 @@
   </title>
 
   <style type="text/css">
-    .error{ color: red; }
+    .error
+    { 
+      color: red; 
+    }
+    
+    body
+    {
+      text-align: center;
+    }
+
+    .number
+    {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .number_input
+    {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    span
+    {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
   </style>
 </head>
 
 <body>
+  <h2>
+    Temperature Converter
+  </h2>
 
   <?php
     
@@ -60,14 +90,31 @@
     }
   ?>
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-    
-    <input type="radio" name="conversion_type" value="Celsius to Farenheit" checked id="inputRadio">Celsius to Farenheit
-    <input type="radio" name="conversion_type" value="Farenheit to Celsius" id="inputRadio">Farenheit to Celsius
+    <div class="outer"> 
+      <div>
+        <input type="radio" name="conversion_type" value="Celsius to Farenheit" checked id="inputRadio">Celsius to Farenheit
+      </div>
 
-    <label for="inputNumber">Temp. to convert:</label>
-    <input type="number" step="any" name="number" id="inputNumber">
-    <span class="error"><?php echo $numberErr; ?></span>
+      <div>
+        <input type="radio" name="conversion_type" value="Farenheit to Celsius" id="inputRadio">Farenheit to Celsius
+      </div>
+      
+      <div class="number">
+        <div>
+          <label for="inputNumber">Temp. to convert</label>
+        </div>
+        
+        <div>
+          <input class="number_input" type="number" step="any" name="number" id="inputNumber">
+        </div>
 
-    <input type="submit" value="Perform Conversion">
+        <div>
+          <span class="error"><?php echo $numberErr; ?></span>
+        </div>
+             
+      </div>
+      
+      <input type="submit" value="Perform Conversion">  
+    </div>
   </form>
 </body>
