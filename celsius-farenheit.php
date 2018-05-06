@@ -16,6 +16,7 @@
     body
     {
       text-align: center;
+      margin-top: 8rem;
     }
 
     .number
